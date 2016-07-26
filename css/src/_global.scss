@@ -1,0 +1,62 @@
+/*****************
+*    General     *
+******************/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    background-color: $backgroundColor;
+    color: $bodyTextColor;
+}
+
+.js-main-container {
+    width: 100%;
+    height: auto;
+    background-color: $backgroundColor;
+}
+
+
+/*****************
+*    Header     *
+******************/
+.cm-header{
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 3;
+    height: 26px;
+    padding: 1rem;
+    background-color: $addContactBack;
+    -webkit-box-shadow: 0 3px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 3px 1px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 1px rgba(0,0,0,0.1);
+    
+    .header-inner {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .header-inner > * {
+        display: inline-block;
+    }
+    
+    .header-back{
+        float: left;
+    }
+    
+    .header-title {
+    }
+    
+    .header-title h1{
+        text-shadow: 0 1px 0 rgba(0,0,0,.1);
+        color: #fff;
+        margin: 0;
+    }
+}

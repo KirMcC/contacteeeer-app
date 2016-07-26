@@ -1,0 +1,43 @@
+<header class="cm-header shadow">
+    <div class="header-inner">
+        <span class="header-title"><h1>View Profile</h1></span>
+   </div>
+</header>
+
+<div class="profile-header">
+    <div class="profile-container">
+        <div class="profile-image"><img src="http://www.fillmurray.com/{{image}}.jpg" alt="{{firstName}} {{lastName}} profile image" /></div>
+      
+        <div class="profile-name">
+            <h3>{{firstName}} {{lastName}}</h3>
+        </div>
+
+        <div class="profileBtn">
+            <button class="js-app-link" id-data="{{id}}" href="edit/{{id}}"><img class="grid-icons" src="../static/img/edit-icon.svg" alt="Edit {{firstName}} {{lastName}}"/></button>
+           <button class="js-del-contact" id-data="{{id}}"><img src="../static/img/delete-icon.svg" alt="Delete {{firstName}} {{lastName}}" /></button>
+        </div>
+    </div>
+</div>
+
+    <ul class="js-profile-view">
+        <div class="profile-detail">
+            <li class="profile-item">
+                <span class="profile-type">Job Title</span>
+                <span class="profile-data">{{jobTitle}}</span>
+            </li>
+
+            <li class="profile-item">
+                <span class="profile-type">Gender</span>
+                <span class="profile-data">{{gender}}</span>
+            </li>
+
+            <li class="profile-item">
+                <span class="profile-type">Email</span>
+                <span class="profile-data"><a href="mailto:{{email}}">{{email}}</a></span>
+            </li>
+        </div>
+    </ul>
+    
+    <div class="addContact">
+        <button type="button" class="js-profile-back" alt="Add new contact">&lt;</button>
+    </div>

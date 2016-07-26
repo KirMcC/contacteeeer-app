@@ -1,0 +1,71 @@
+
+
+//Font styles
+@mixin OpenSan-Light(){
+    font-family:'Open Sans', Helvetica, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+}
+
+@mixin OpenSan-Regular(){
+    font-family: 'Open Sans', Helvetica, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
+@mixin OpenSan-Bold(){
+    font-family: 'Open Sans', Helvetica, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/*****************
+*   form boxes  *
+******************/
+
+@mixin select-box(){
+    font-style: normal;
+    font-size: 1em;
+    border-radius: 0;
+    background-color: #ffffff;
+    border: 2px solid #e6e6e6;
+    cursor: pointer;
+    width: 98%;
+    padding: 0.6em;
+    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    background: url("../img/select-icon-arrow.svg") 95% no-repeat #fff;
+}
+
+/*****************
+*   media queries *
+******************/
+$break-small: 320px;
+$break-large: 1024px;
+
+@mixin respond-to($media) {
+    
+    /* 320px */
+    @if $media == handhelds {
+        @media only screen and (max-width: $break-small) { @content; }
+    }
+    
+    /* 322px - 1023px */
+    @else if $media == medium-screens {
+        @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+    }
+    
+    /* min-width: 620px */
+    @else if $media == grid-mid-break {
+        @media only screen and (min-width: $break-small + 300) { @content; }
+    }
+    
+    /* min-width: 1024px */
+    @else if $media == wide-screens {
+        @media only screen and (min-width: $break-large) { @content; }
+    }
+}
+

@@ -1,0 +1,34 @@
+<header class="cm-header shadow">
+   <div class="header-inner">
+        <span class="header-title"><h1>Add Contact</h1></span>
+   </div>
+</header>
+
+<div class="add-container">
+   <div class="form-container">
+        <div aria-live="polite" aria-hidden="true" class="message"><p>There are unsaved edits in this form</p></div>
+        <form class="edit-form" novalidate>
+            <div><label>First name:</label><input type="text" name="firstName" placeholder="First Name" aria-required="true" aria-invalid="false"  /></div>
+            <div><label>Last name:</label><input type="text" name="lastName" placeholder="last Name" aria-required="true" aria-invalid="false" /></div>
+            <div><label>Job title:</label><input type="text" name="jobTitle" placeholder="jobTitle" aria-required="true" aria-invalid="false"  /></div>
+            <div>
+                <label>Gender:</label><select class="selGender" name="gender" aria-required="true" aria-invalid="false">
+                    <option value="Gender">Gender</option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    </select>
+            </div>
+            <div><label>Email:</label><input type="text" name="email" placeholder="Email" aria-required="true" aria-invalid="false"/></div>
+            
+            <div class="form-button">
+                <button class="js-add-contact saveBtn" aria-label="Create contact">Create</button>
+                <button class="js-form-back delBtn" aria-label="Cancel adding new contact">Cancel</button>
+           </div>
+        </form>
+    </div>
+</div>
+ 
+  <div class="addContact">
+        <button class="js-form-back" aria-label="Return to contact list">&lt;</button>
+  </div>
+  

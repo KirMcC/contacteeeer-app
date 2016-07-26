@@ -1,0 +1,46 @@
+.app-loader, .grid-loader {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+    opacity: 0;
+    transition: opacity 0.6s 0.3s;
+    pointer-events: none;
+
+    .svg-wrapper {
+        width: 60px;
+        max-width: 300px;
+        height: 60px;
+
+        animation: rotation 1500ms linear infinite;
+        border-left: 6px solid rgba(0, 174, 239, .15);
+        border-right: 6px solid rgba(0, 174, 239, .15);
+        border-bottom: 6px solid rgba(0, 174, 239, .15);
+        border-top: 6px solid rgba(0, 174, 239, .8);
+        border-radius: 100%;
+        
+    }
+
+    &.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to{
+        transform: rotate(359deg);
+    }
+}

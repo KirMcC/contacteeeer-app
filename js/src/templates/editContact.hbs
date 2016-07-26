@@ -1,0 +1,56 @@
+<header class="cm-header shadow">
+    <div class="header-inner">
+        <span class="header-title"><h1>Edit Contacts</h1></span>
+    </div>
+</header>
+
+<div class="profile-header">
+    <div class="profile-container">
+        <div class="profile-image"><img src="http://www.fillmurray.com/{{image}}.jpg" alt="{{firstName}} {{lastName}} profile image" /></div>
+
+        <div class="edit-name">
+            <form class="contact-form" novalidate>
+                <div>
+                    <label>First name:<input type="text" name="firstName" aria-label="Edit firstname" aria-required="true" aria-invalid="false" value="{{firstName}}" /></label>
+                </div>
+                <div>
+                    <label>Last name:<input type="text" name="lastName"  aria-label="Edit lastname" aria-required="true" aria-invalid="false" value="{{lastName}}" /></label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="edit-container" tabindex="0">
+    <div class="form-container">
+        <div aria-live="polite" aria-hidden="true" class="message">
+            <p>There are unsaved edits for {{firstName}} {{lastName}}</p>
+        </div>
+        <form class="edit-form" novalidate>
+            <div>
+                <label>Job title:<input type="text" name="jobTitle" aria-label="Edit job title" aria-required="true" aria-invalid="false" value="{{jobTitle}}" /></label>
+            </div>
+            <div>
+                <label>Gender:<select aria-required="true" aria-invalid="false" aria-label="Edit gender" class="selGender" name="gender">
+                    <option value="Gender">Gender</option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select></label>
+            </div>
+            <div>
+                <label>Email:<input aria-required="true" aria-label="Edit email" aria-invalid="false" type="text" name="email" value="{{email}}" /></label>
+            </div>
+        
+            <div class="form-button">
+                <button class="js-edit-contact saveBtn" id-data="{{id}}" aria-label="Edit {{firstName}} {{lastName}}">Edit</button>
+                <button class="js-form-back delBtn" id-data="{{id}}" aria-label="Cancel editing">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+ 
+<div class="addContact">
+    <button class="js-form-back" id-data="{{id}}" aria-label="Return to contact list">&lt;</button>
+</div>
+  

@@ -1,0 +1,24 @@
+<form class="filter-form" tabindex="-1">
+    {{#each filterOptions}}
+        <div class="select-filter">
+          <select id="type-list" title="Select type">
+              <option id="0" value="All" name="All">All</option>
+              <option id="1" value="gender" name="gender">Gender</option>
+              <option id="2" value="jobTitle">Job Title</option>
+          </select>
+        </div>
+    {{/each}}
+
+    <div class="select-filter">
+        <select id="populated-list" title="Select item">
+            <option>Please choose type first</option>
+        </select>
+    </div>
+
+    <button type="button" class="js-filter-reset reset-button">Reset</button>
+</form>
+
+<div class="filter-arrow"><p>Filter</p></div>
+
+
+

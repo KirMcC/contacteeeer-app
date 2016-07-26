@@ -1,0 +1,63 @@
+.add-container {
+    padding: 5em 0 2em 0;
+    background-color: $backgroundColor;
+}
+
+.form-container {
+    padding: 1em;
+    height: 100%;
+}
+
+/*/// EDIT PAGE NAME SECTION /// */
+.edit-name{
+    margin: 16px 0;
+    text-align: center;
+    @include OpenSan-Light;
+    color: #ffffff;
+}
+    
+    .contact-form {
+        position: relative;
+        z-index: 0;
+        margin: 0 auto;
+        max-width: 400px;
+        -webkit-box-shadow: 3px 3px 4px rgba(0,0,0,0.1);
+        -moz-box-shadow: 3px 3px 4px rgba(0,0,0,0.1);
+        box-shadow: 3px 3px 4px rgba(0,0,0,0.1);
+
+        
+        div {
+            padding: 10px 25px;
+        }
+        
+        input {
+            font-style: normal;
+            font-size: 1em;
+            border-radius: 0;
+            background-color: #ffffff;
+            border: 2px solid #e6e6e6;
+            cursor: pointer;
+            width: 93%;
+            padding: 0.6em;
+            text-align: center;
+        }
+    }
+
+.edit-form {
+    
+    @extend .contact-form;
+    background-color: #ffffff;
+
+    div {
+        padding: 25px;
+        border-bottom: 1px solid #eee;
+    }
+
+    select {
+        @include select-box;
+    }
+    
+    input {
+        text-align: left;
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "globals": {
+        "console": false,
+        "define": false,
+        "require": false
+    },
+    "node": true,
+    "browser": true,
+    "curly": true,
+    "latedef": true,
+    "undef": true,
+    "unused": true,
+    "trailing": true
+}

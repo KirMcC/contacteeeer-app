@@ -1,0 +1,97 @@
+//Import libraries
+@import '../libs/normalize';
+
+//Import variables and mixins
+@import 'mixins';
+@import 'variables';
+
+//Include modular stylesheets
+@import 'global';
+@import 'typography';
+@import 'loader';
+
+@import 'components/filter';
+@import 'components/buttons';
+@import 'components/grid';
+@import 'components/profile';
+@import 'components/form';
+@import 'components/popupMessage';
+
+/***** General Styles ******/
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toast-message{
+    position: fixed;
+    z-index: 1;
+    top: 75%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 3%;
+    width: 50%;
+    overflow: auto;
+    margin: auto;
+    padding: 15px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+    background-color: $toastBackground;
+    color: #F0F0F0;
+    text-align: center;
+    
+    transition: visibility 0s, opacity 0.5s linear;
+    
+    &.on-show{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    &.on-out {
+        transition: visibility 0s 5s, opacity 0.5s 4s linear;
+    }
+}
+
+//Modal popup box
+
+.js-modal-dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
+    pointer-events: none;
+    
+    &.show-dialog {
+        opacity:1;
+        pointer-events: auto;
+    }
+}
+
+.js-modal-dialog > div {
+    width: 60%;
+    height: auto;
+    position: relative;
+    margin: 15em auto;
+    background: #fff;
+}
+
+.modal-des {
+    padding: 10px;
+    color: $titleTextColor;
+    background-color: #FF5B52;
+    
+}

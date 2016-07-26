@@ -1,0 +1,37 @@
+ 
+<div class="inner modal" tab-index="-1" role="dialog" aria-labelledby="dialog-title">
+    {{#if delete}}
+        <div id="dialog-title" class="modal-des">
+            <p>Delete {{firstName}} {{lastName}}?</p>
+        </div>
+
+        <div class="form-button" style="padding:10px;">
+            <button type="button" class="js-cancel-btn saveBtn">Cancel</button>
+            <button type="button" class="js-delete-contact delBtn">Delete</button>
+        </div>
+       {{/if}}
+
+       {{#if edit}}
+        <div id="dialog-title" class="modal-des">
+            <p>Updates for {{firstName}} {{lastName}} not saved.</p>
+        </div>
+
+        <div class="dialog form-button" style="padding:10px;">
+            <p>Are you sure you want to leave page?</p>
+            <button class="js-cancel-btn btn saveBtn">Cancel</button>
+            <button  class="js-edit-back delContact btn delBtn">Yes</button>
+        </div>
+       {{/if}}
+
+       {{#if add}}
+        <div class="modal-des">
+            <p id="dialog-title">New contact not saved.</p>
+        </div>
+
+        <div class="form-button" style="padding:10px;">
+            <p id="dialog-title">Are you sure you want to leave page?</p>
+            <button class="js-cancel-btn btn saveBtn">Cancel</button>
+            <button class="js-edit-back delContact btn delBtn">Yes</button>
+        </div>
+    {{/if}}
+</div>
